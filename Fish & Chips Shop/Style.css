@@ -1,0 +1,299 @@
+/* ============================= */
+/* SECTION 1 = Universal Configs */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================== */
+/* SECTION 2 = Menu Navigation */
+/* =========================== */
+
+.hero {
+    display: flex;
+    position: relative;    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    min-height: 80vh;
+    padding: 20px;
+    background-color: #000;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    background-image: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092");
+    background-size: cover;
+    background-position: center;
+
+    animation: ImageZoom 1s ease-out forwards;
+}
+
+.hero_title {
+    position: absolute;
+    z-index: 2;
+    color: rgb(194, 175, 0);
+    font-family: cursive;
+
+    animation: SlideDown 1s ease-out forwards;
+}
+
+.hero_navigation {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    width: 103.5%;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    z-index: 2;
+
+    animation: SlideDown 1s ease-out forwards;
+}
+
+.hero_info {
+    padding: 12px 24px;
+    border-radius: 4px;
+
+    background-color: #2bff00c0;
+    color: black;
+
+    border: none;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero_info:hover {
+    transform: scale(1.05);
+}
+
+.hero_menu {
+    padding: 12px 24px;
+    border-radius: 4px;
+
+    background-color: #2bff00c0;
+    color: black;
+
+    border: none;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero_menu:hover {
+    transform: scale(1.05);
+}
+
+.contact_us {
+    padding: 12px 24px;
+    border-radius: 4px;
+
+    background-color: #2bff00c0;
+    color: black;
+
+    border: none;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact_us:hover {
+    transform: scale(1.05);
+}
+
+@keyframes ImageZoom {
+    from {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===================== */
+/* SECTION 3 = Menu List */
+/* ===================== */
+
+.menu {
+    padding: 32px;
+    background-color: #d3ffaad7;
+}
+
+.menu_title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+.menu_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu_card {
+    width: 250px;
+    border: 1px solid #333;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.menu_img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.menu_info h3 {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.menu_description {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.menu_price {
+    font-weight: bold;
+    text-align: right;
+    margin-top: auto;
+}
+
+/* ============================ */
+/* SECTION 4 = Shop Information */
+/* ============================ */
+
+.info {
+    padding: 32px;
+    background-color: #d3ffaad7;
+}
+
+.info_title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+.info_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+
+    border: 2px solid #333;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.info_description {
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 650;
+    font-style: italic;
+    text-align: center;
+    max-width: 900px;
+}
+
+/* =============================== */
+/* SECTION 5 = Contact Information */
+/* =============================== */
+
+.contact {
+    padding: 80px;
+    background-color: #6d4a00bd;
+    border-top: #000;
+    text-align: center;
+}
+
+.contact_title {
+    margin-top: -40px;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.contact_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact_info {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.contact_openingTimes_title {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.opening_times {
+    font-weight: 600;
+    margin-top: -10px;
+}
