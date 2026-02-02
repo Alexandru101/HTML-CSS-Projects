@@ -1,7 +1,6 @@
 # Simple Counter
 
 ## Step 1: Structuring the UI with HTML
-
 We first start by creating a parent div to manage the overall layout. This contains a counter label and a nested div element for the buttons. By wrapping the buttons in their own container, we can easily switch their layout from a vertical column to a horizontal row using Flexbox.
 
 - index.html file below
@@ -32,7 +31,6 @@ We first start by creating a parent div to manage the overall layout. This conta
 ```
 
 ## Step 2: Styling UI
-
 - style.css below
 ```
 body {
@@ -41,7 +39,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #c2a0a0;
+    background-color: #ebe0e0;
 }
 
 .counter__design {
@@ -67,5 +65,33 @@ body {
 
 .button__design {
     font-size: 2em;
+}
+```
+
+## Step 3: Handling Logic With Javascript
+First, we reference all the elements (counter_label and buttons) and create a variable named counter with the value 0 assigned as the starting point.
+
+Finally, we add an onclick event to all the buttons to increment, decrease, or reset the counter, then update the label_counter text to the counter's current value.
+```
+const label_counter = document.getElementById("counter_label");
+const decreaseBtn = document.getElementById("decrease_button");
+const resetBtn = document.getElementById("reset_button");
+const increaseBtn = document.getElementById("increase_button");
+
+let counter = 0;
+
+decreaseBtn.onclick = function(){
+    counter--;
+    label_counter.textContent = counter;
+}
+
+resetBtn.onclick = function(){
+    counter = 0;
+    label_counter.textContent = counter;
+}
+
+increaseBtn.onclick = function(){
+    counter++;
+    label_counter.textContent = counter;
 }
 ```
