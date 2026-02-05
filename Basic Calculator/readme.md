@@ -129,3 +129,15 @@ operation_buttons.forEach(button => {
     })
 })
 ```
+## Step 5: Reset Button (AC)
+Click event for the 'AC' button to clear characters and operators array, We also reset the expression, and return the display to its default state.
+```
+reset_button.onclick = function(){
+    characters = [];
+    operators = [];
+    expression = "";
+
+    display.textContent = "0";
+    display.style.fontSize = "100px";
+}
+```
