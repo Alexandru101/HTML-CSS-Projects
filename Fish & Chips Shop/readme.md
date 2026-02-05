@@ -1,3 +1,1 @@
-# Documentation Coming Soon
-
-[Website](https://fish-and-chips-shop.vercel.app/)
+# [Website Preview](https://fish-and-chips-shop.vercel.app/)
