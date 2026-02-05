@@ -20,6 +20,7 @@ const symbols = ["+", "-", "*", "/"];
 let characters = [];
 let operators = [];
 let expression = "";
+let is_result = false;
 ```
 
 ## Step 2: Attaching Click Events (number buttons)
@@ -30,10 +31,9 @@ number_buttons.forEach(button => {
         if (expression.length > 13) { return; }
 
         const num = button.innerText;
-        if (operators.length === 0 && characters.length === 0 && expression !== "") {
+        if (is_result || expression === "0" || expression === "") {
             expression = num;
-        } else if (expression === "0" || expression === "") {
-            expression = num;
+            is_result = false;
         } else {
             expression += num;
         }
@@ -59,7 +59,6 @@ function calculate_expression(){
         if (characters.length === 1){
             display.textContent = characters[0];
         } 
-
         return;
     }
 
@@ -77,14 +76,11 @@ function calculate_expression(){
         if (currentOperator === "/") {
             if (nextNum === 0) {
                 display.textContent = "Error";
-
                 characters = [];
                 operators = [];
                 expression = "";
-
                 return;
             }
-
             result /= nextNum;
         }
     }
@@ -94,7 +90,8 @@ function calculate_expression(){
 
     characters = [];
     operators = [];
-    expression = result.toString();
+    expression = finalResult.toString();
+    is_result = true;
 }
 ```
 
@@ -112,16 +109,15 @@ operation_buttons.forEach(button => {
             if (expression != ""){
                 characters.push(Number(expression));
             }
-
             calculate_expression();
             return;
         }
 
+        is_result = false;
         if (expression !== ""){
             characters.push(Number(expression));
             operators.push(operator);
             expression = "";
-
             display.textContent = operator;
             display.style.fontSize = "100px";
         } else if (operators.length > 0) {
@@ -138,7 +134,7 @@ reset_button.onclick = function(){
     characters = [];
     operators = [];
     expression = "";
-
+    is_result = false;
     display.textContent = "0";
     display.style.fontSize = "100px";
 }
