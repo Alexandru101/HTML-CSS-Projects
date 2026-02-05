@@ -52,5 +52,80 @@ number_buttons.forEach(button => {
 ## Step 3: Calculating Expression Function
 The "brain" of the calculator. This function takes all the stored numbers and operators, runs through them from left to right, and updates the screen with the final answer. It also keeps things tidy by rounding long decimals and catching division-by-zero errors before they crash the site
 ```
+function calculate_expression(){
+    if (characters.length < 2 && operators.length === 0){
+        if (characters.length === 1){
+            display.textContent = characters[0];
+        } 
 
+        return;
+    }
+
+    let result = characters[0];
+
+    for (let i = 0; i < operators.length; i++){
+        const currentOperator = operators[i];
+        const nextNum = characters[i + 1];
+
+        if (nextNum === undefined) { break; }
+        if (currentOperator === "+") { result += nextNum; }
+        if (currentOperator === "-") { result -= nextNum; }
+        if (currentOperator === "*") { result *= nextNum; }
+
+        if (currentOperator === "/") {
+            if (nextNum === 0) {
+                display.textContent = "Error";
+
+                characters = [];
+                operators = [];
+                expression = "";
+
+                return;
+            }
+
+            result /= nextNum;
+        }
+    }
+
+    const finalResult = Number(result.toFixed(3));
+    display.textContent = finalResult;
+
+    characters = [];
+    operators = [];
+    expression = result.toString();
+}
+```
+
+## Step 4: Attaching Click Events (operator buttons)
+Attaching click events to the operator buttons.
+
+When a math operator is clicked, the current 'expression' is converted to a number and stored. If '=' is clicked, it triggers the calculation.
+
+This also handles operator swapping, allowing users to change their mind for example from + to * etc.
+```
+operation_buttons.forEach(button => {
+    button.addEventListener('click', () =>{
+        const operator = button.innerText;
+        if (operator === "="){
+            if (expression != ""){
+                characters.push(Number(expression));
+            }
+
+            calculate_expression();
+            return;
+        }
+
+        if (expression !== ""){
+            characters.push(Number(expression));
+            operators.push(operator);
+            expression = "";
+
+            display.textContent = operator;
+            display.style.fontSize = "100px";
+        } else if (operators.length > 0) {
+            operators[operators.length - 1] = operator;
+            display.textContent = operator;
+        }
+    })
+})
 ```
