@@ -7,3 +7,4 @@ All projects include a README file that provides documentation specific to that 
 - [Fish & Chips Shop](https://github.com/Alexandru101/HTML-CSS-Projects/tree/main/Fish%20%26%20Chips%20Shop) --> [Website](https://fish-and-chips-shop.vercel.app/)
 - [Counter Program](https://github.com/Alexandru101/web-dev-projects/tree/main/Counter%20Program)
 - [Basic Calculator](https://github.com/Alexandru101/web-dev-projects/tree/main/Basic%20Calculator)
+- [Dice Roller Minigame](https://github.com/Alexandru101/web-dev-projects/tree/main/Dice%20Roller%20Minigame)
