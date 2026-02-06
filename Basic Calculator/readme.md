@@ -4,7 +4,7 @@
 ### Project Overview
 As my first JavaScript project, the main goal was to build a functional calculator that handles basic operations (addition, subtraction, multiplication, and division) while supporting result-chaining, allowing users to continue calculations immediately after a result is generated.
 
-Scope & Limitations, This project focuses on linear, left-to-right logic rather than BIDMAS/PEMDAS order of operations. It is designed as a standard pocket calculator and does not include scientific functions like trigonometry (sin, cos, tan) or logarithms.
+Scope & Limitations, This project focuses on linear, left-to-right logic rather than BIDMAS/PEMDAS order of operations. It is designed as a standard pocket calculator and does not include scientific functions like trigonometry (sin, cos, tan) or logarithms. Note this documentation includes javascript only for the html/css please look at the source code.
 
 <img width="584" height="803" alt="Capture" src="https://github.com/user-attachments/assets/a6f6dee4-8050-497c-b425-5c38215f102d" />
 
