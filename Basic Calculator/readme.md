@@ -1,5 +1,6 @@
 # Basic-Calculator Documentation
 [License](https://github.com/Alexandru101/web-dev-projects/blob/main/LICENSE)
+[Website](https://alexandru101.github.io/web-dev-projects/Basic%20Calculator/)
 
 ### Project Overview
 As my first JavaScript project, the main goal was to build a functional calculator that handles basic operations (addition, subtraction, multiplication, and division) while supporting result-chaining, allowing users to continue calculations immediately after a result is generated.
