@@ -8,3 +8,4 @@ All projects include a README file that provides documentation specific to that 
 - [Counter Program](https://github.com/Alexandru101/web-dev-projects/tree/main/Counter%20Program)
 - [Basic Calculator](https://github.com/Alexandru101/web-dev-projects/tree/main/Basic%20Calculator)
 - [Dice Roller Minigame](https://github.com/Alexandru101/web-dev-projects/tree/main/Dice%20Roller%20Minigame)
+- [To-Do List](https://github.com/Alexandru101/web-dev-projects/tree/main/To-Do%20List)
