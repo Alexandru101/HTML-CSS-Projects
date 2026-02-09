@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #0A84FF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    gap: 20px;
+    padding: 20px;
+}
+
+#container {
+    height: 130px;
+    width: 300px;
+
+    background-color: #0F1A24;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border: 5px solid #0F1A24;
+    border-radius: 30px;
+
+    transform: translateY(-100px);
+    gap: 5px;
+}
+
+#time {
+    font-size: 50px;
+    color: white;
+    font-family: "Roboto Mono";
+}
+
+#date {
+    font-size: 20px;
+    color: white;
+}
