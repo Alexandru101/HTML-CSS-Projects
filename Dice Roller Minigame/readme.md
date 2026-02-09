@@ -1,4 +1,5 @@
 # Dice-Roller-Minigame Documentation
+[Website](https://alexandru101.github.io/web-dev-projects/Dice%20Roller%20Minigame/)
 <img width="1011" height="849" alt="image" src="https://github.com/user-attachments/assets/572dfc16-aefa-496b-8b56-486c24c64b0a" />
 
 ## Step 1: Declaring Dice Min & Max Roll
