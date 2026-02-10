@@ -144,6 +144,6 @@ reset_button.onclick = function(){
 ## Setup Instructions
 
 - Download [Visual Studio Code](https://code.visualstudio.com/) and make sure to have "Live Server" extension installed
-- Create a folder for the project and make sure to change the html stylesheet "href" to look for your projects file name
-- Create three files within that folder for index.html, index.js and style.css.
+- Create a folder for the project and make sure to change the html stylesheet "href" suitable for your project file names
+- Create three files within that folder for index.html, index.js and style.css (optional but recommended)
 - Press "Go Live" at the bottom of your visual studio code (IDE)
