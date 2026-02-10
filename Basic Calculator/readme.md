@@ -1,5 +1,5 @@
 # Basic-Calculator Documentation
-[License](https://github.com/Alexandru101/web-dev-projects/blob/main/LICENSE)\n
+[License](https://github.com/Alexandru101/web-dev-projects/blob/main/LICENSE)
 [Website](https://alexandru101.github.io/web-dev-projects/Basic%20Calculator/)
 
 ### Project Overview
