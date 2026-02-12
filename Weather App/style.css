@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url('https://media.istockphoto.com/id/926497236/photo/tropical-sea-in-summer.jpg?s=612x612&w=0&k=20&c=SgT--E-a5_UF4GPVnpC6r1IDtThuDiUHmtTbhHg5zJA=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.app-container {
+    height: 700px;
+    width: 90%;
+    max-width: 700px;
+
+    text-align: center;
+    background-color: #000000a8;
+    border-radius: 5px;
+    box-shadow: 0 0px 3px 3px #000000ce;
+
+    padding: 20px;
+    opacity: 0.9;
+}
+
+.app-header h1 {
+    text-decoration: underline;
+    font-size: 3rem;
+    color: #dfa60a;
+}
+
+.app-header p {
+    font-size: 1.1rem;
+    color: #f3e3e3;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+input[type="text"] {
+    flex: 1;
+    font-size: 1rem;
+
+    color: #f0e7e7;
+    background-color: #444444;
+
+    border: 5px solid #00000098;
+    border-radius: 16px;
+
+    outline: none;
+    padding: 7px;
+    transition: box-shadow 0.08s ease-in-out;
+}
+
+input[type="text"]::placeholder {
+    color: #d3c3c3;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 8px #ff9100be;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: bold;
+
+    color: #fffffff5;
+    background-color: #ff9100;
+
+    border: 3px solid #ff9100;
+    border-radius: 16px;
+
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff9100c9;
+    transform: scale(1.05);
+}
+
+.weather-container {
+    height: 50%;
+    width: 100%;
+    background-color: #00000066;
+
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    
+    gap: 15px 20px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.icon img {
+    height: auto;
+    width: 200px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    padding: 20px;
+}
+
+.info h2 {
+    font-size: 2.5rem;
+    color: #ff9100;
+}
+
+.info p {
+    font-size: 1.3rem;
+    color: #dfd7d7;
+    margin: 6.5px;
+}
+
+.forecast-container {
+    height: 162px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.day {
+    text-align: center;
+    background: #000000a8;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #00000066;
+    padding: 15px;
+}
+
+.weekday {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff8c00;
+    margin-bottom: 10px;
+}
+
+.day .icon img {
+    width: 50px;
+}
+
+.temp {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dfd7d7;
+}
